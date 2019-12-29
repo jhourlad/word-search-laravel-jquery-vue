@@ -16,7 +16,7 @@ class CreatePreviousSearchesTable extends Migration
         Schema::create('previous_searches', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('word');
-            $table->string('part_of_speech', 15);
+            $table->string('part_of_speech', 15)->nullable();
             $table->longText('definition');
             $table->unsignedBigInteger('hits');
             $table->timestamps();
